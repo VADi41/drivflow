@@ -1,0 +1,745 @@
+body{
+  background-color: black;
+}
+body,p{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+::selection {
+  background: black;
+  color: white;
+}
+#logoSection{
+  z-index: 1;
+  padding: 25px;
+  display: inline-flex;
+  position: absolute;
+}
+#logoOverflow{
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  height: 35px;
+}
+.colorTextBlack{
+  color:black;
+}
+.colorTextWhite{
+  color:white;
+}
+.dontTouchText{
+  style="-moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;"
+  cursor: default;
+}
+.dontTouchText:hover{
+  cursor: default;
+}
+.logoText{
+  font-style: italic;
+  font-weight: 900;
+  font-size: 30px;
+  transition: all 0.5s ease;
+  margin-left: 10px;
+}
+#logoTextHome{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+.logoWhite{
+  width: 30px;
+  height: 30px;
+  background-image: url('../img/logoWhite.png');
+  background-position: center;
+  background-size: contain;
+}
+#logoWhiteHome{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+.logoBlack{
+  width: 30px;
+  height: 30px;
+  background-image: url('../img/logoBlack.png');
+  background-position: center;
+  background-size: contain;
+}
+#fp-nav ul li a.active span{
+  height: 22px;
+  width: 22px;
+  margin: -7px 0 0 -7px;
+  border-radius: 0% !important;
+}
+#fp-nav ul li a span{
+  background-color: white !important;
+  height: 22px;
+  width: 22px;
+  margin: -7px 0 0 -7px;
+  border-radius: 0% !important;
+}
+#homeSection{
+  background-color:black;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows: 1fr 100px 1fr;
+}
+#homeText{
+  grid-row: 2;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns:50vw 50vw;
+  grid-template-rows: 100px;
+  align-items: center;
+}
+#homeText p{
+  color:white;
+  font-size: 100px;
+  font-style: italic;
+}
+.itText{
+  font-weight: 100;
+  grid-column: 1;
+  justify-self: end;
+  margin-right: 20px;
+  font-style: normal !important;
+}
+#itText{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+#itTextOut{
+  display: block;
+  -webkit-animation-name: slideOutDown;
+          animation-name: slideOutDown;
+}
+.boldText{
+  font-weight: 900;
+  grid-column: 2;
+  margin-left: 20px;
+}
+#firstText{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+#firstTextOut{
+  display: block;
+  -webkit-animation-name: slideOutDown;
+          animation-name: slideOutDown;
+}
+.thinText{
+  font-weight: 100;
+  grid-column: 2;
+  margin-left: 20px;
+}
+#secondText{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+#secondTextOut{
+  display: block;
+  -webkit-animation-name: slideOutDown;
+          animation-name: slideOutDown;
+}
+#thirdText{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+#thirdTextOut{
+  display: block;
+  -webkit-animation-name: slideOutDown;
+          animation-name: slideOutDown;
+}
+#nameText{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+#nameTextOut{
+  display: block;
+  -webkit-animation-name: slideOutDown;
+          animation-name: slideOutDown;
+}
+.logoImg{
+  width: 100px;
+  height: 100px;
+  background-image: url('../img/logoWhite.png');
+  background-position: center;
+  background-size: contain;
+  grid-row: 1;
+  justify-self: end;
+}
+#logoImg{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+#logoImgOut{
+  display: block;
+  -webkit-animation-name: slideOutDown;
+          animation-name: slideOutDown;
+}
+#arrowCont{
+  grid-row: 3;
+  height: 40px;
+  width: 50px;
+  margin-bottom: 35px;
+  justify-self: center;
+  align-self: end;
+  overflow: hidden;
+}
+.arrowDown{
+  background-image: url('../img/arrow.png');
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+}
+#arrowDown{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+#arrowDownOut{
+  display: block;
+  -webkit-animation-name: slideOutDown;
+          animation-name: slideOutDown;
+}
+
+#aboutSection{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 500px 500px 1fr;
+  grid-template-rows: 1fr 220px 40px 5px 40px 220px 1fr;
+}
+#aboutTextCont{
+  grid-row: 3/6;
+  grid-column: 2/4;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutText{
+  font-weight: 900;
+  font-style: italic;
+  font-size: 100px;
+  background-color: white;
+}
+#aboutText{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+.usAboutText{
+  font-weight: 100;
+  font-style: italic;
+  font-size: 100px;
+  background-color: white;
+}
+#usAboutText{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+#strokeTopBottomAbout{
+  grid-row: 4;
+  grid-column: 2/4;
+  justify-self: center;
+  background-color: black;
+  width: 0%;
+  transition: all 1s ease;
+}
+#topAboutTextCont{
+  grid-row: 2/5;
+  grid-column: 2;
+  overflow: hidden;
+  display: grid;
+  position: relative;
+}
+#topAboutImage{
+  grid-row: 2/5;
+  grid-column: 3;
+  overflow: hidden;
+  display: grid;
+  position: relative;
+}
+.topAbout{
+  width: 100%;
+  height: 0%;
+  background-color: black;
+  transition: all 1s ease;
+  align-self: end;
+  z-index: 10;
+}
+#bottomAboutText{
+  grid-row: 5/7;
+  grid-column: 2;
+  overflow: hidden;
+  display: grid;
+  position: relative;
+}
+#bottomAboutImage{
+  grid-row: 5/7;
+  grid-column: 3;
+  overflow: hidden;
+  display: grid;
+  position: relative;
+}
+.bottomAbout{
+  width: 100%;
+  height: 0%;
+  background-color: black;
+  transition: all 1s ease;
+  align-self: start;
+  z-index: 10;
+}
+.topBottomAboutText{
+  display: none;
+  position: absolute;
+  padding: 25px;
+}
+.topBottomAboutImg{
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(1);
+}
+#topAboutImg{
+  display: none;
+  background-image: url('../img/about (1).jpg');
+}
+#bottomAboutImg{
+  display: none;
+  background-image: url('../img/about (2).jpg');
+}
+
+
+
+
+
+#projectsSection{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 500px 5px 500px 1fr;
+  grid-template-rows: 1fr 185px 75px 5px 75px 185px 1fr;
+}
+#projectsTextCont{
+  grid-row: 3/6;
+  grid-column: 2/5;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+#projectsText{
+  font-weight: 900;
+  font-style: italic;
+  font-size: 100px;
+  background-color: black;
+}
+.projectsText{
+  font-weight: 900;
+  font-style: italic;
+  font-size: 100px;
+  background-color: black;
+}
+#projectsText{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+.ourText{
+  font-weight: 100;
+  font-style: italic;
+  font-size: 100px;
+  background-color: black;
+}
+#ourText{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+#strokeTopBottomProjects{
+  grid-row: 4;
+  grid-column: 2/5;
+  justify-self: center;
+  background-color: white;
+  width: 0%;
+  transition: all 1s ease;
+}
+#topProjectsStroke{
+  grid-row: 2/5;
+  grid-column: 3;
+  background-color: white;
+  width: 100%;
+  height: 0%;
+  transition: all 1s ease;
+  align-self: end;
+  z-index: 10;
+}
+#bottomProjectsStroke{
+  grid-row: 5/7;
+  grid-column: 3;
+  background-color: white;
+  width: 100%;
+  height: 0%;
+  transition: all 1s ease;
+  align-self: start;
+  z-index: 10;
+}
+#topLeftProjectsCont{
+  grid-row: 2/5;
+  grid-column: 2;
+  overflow: hidden;
+  display: grid;
+  position: relative;
+}
+#topRightProjectsCont{
+  grid-row: 2/5;
+  grid-column: 4;
+  overflow: hidden;
+  display: grid;
+  position: relative;
+}
+#bottomLeftProjectsCont{
+  grid-row: 5/7;
+  grid-column: 2;
+  overflow: hidden;
+  display: grid;
+  position: relative;
+}
+#bottomRightProjectsCont{
+  grid-row: 5/7;
+  grid-column: 4;
+  overflow: hidden;
+  display: grid;
+  position: relative;
+}
+.projectsContToggle{
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.topProjects{
+  width: 100%;
+  height: 0%;
+  background-color: white;
+  transition: all 1s ease;
+  align-self: end;
+  z-index: 10;
+}
+.bottomProjects{
+  width: 100%;
+  height: 0%;
+  background-color: white;
+  transition: all 1s ease;
+  align-self: start;
+  z-index: 10;
+}
+.projectTemplate{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(1);
+  display: grid;
+  grid-template-rows: 50px 4px 1fr 25px;
+}
+#firstProject{
+  background-image: url('../img/projects (1).jpg');
+}
+#secondProject{
+  background-image: url('../img/projects (2).jpg');
+}
+#thirdProject{
+  background-image: url('../img/projects (3).jpg');
+}
+#fourthProject{
+  background-image: url('../img/projects (4).jpg');
+}
+.projectStroke{
+  grid-row: 2;
+  height: 4px;
+  background-color: white;
+  justify-self: center;
+  width: 0%;
+  transition: all 1s ease;
+}
+.projectName{
+  align-self: center;
+  justify-self: center;
+  font-size: 30px;
+  overflow: hidden;
+  font-weight: 900;
+  font-style: italic;
+  margin-top: 3px;
+}
+#projectName{
+  display: none;
+  -webkit-animation-name: slideInUp;
+          animation-name: slideInUp;
+}
+#projectNameOut{
+  display: block;
+  -webkit-animation-name: slideOutDown;
+          animation-name: slideOutDown;
+}
+.textProject{
+  grid-row: 3;
+  margin: 25px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+#textProject{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+#textProjectOut{
+  display: block;
+  -webkit-animation-name: slideOutUp;
+          animation-name: slideOutUp;
+}
+#turnOffProject{
+  grid-row: 4;
+  justify-self: center;
+  align-self: center;
+  overflow: hidden;
+}
+#turnOffProject:hover{
+  cursor: pointer;
+}
+#textOffProject{
+  display: none;
+  -webkit-animation-name: slideInUp;
+          animation-name: slideInUp;
+}
+#textOffProjectOut{
+  display: block;
+  -webkit-animation-name: slideOutDown;
+          animation-name: slideOutDown;
+}
+#hoverNotifyProject{
+  display: none;
+  justify-self: center;
+  align-self: end;
+  margin-bottom: 15px;
+  color: white;
+  font-style: italic;
+  font-size: 24px;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+#hoverNotifyProjectOut{
+  display: none;
+  justify-self: center;
+  align-self: end;
+  margin-bottom: 15px;
+  color: white;
+  font-style: italic;
+  font-size: 24px;
+  -webkit-animation-name: fadeOutUp;
+          animation-name: fadeOutUp;
+}
+
+
+#contactSection{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  /*grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1000px 1fr;*/
+  grid-template-columns: 1fr 500px 500px 1fr;
+  grid-template-rows: 1fr 220px 40px 5px 40px 220px 1fr;
+}
+#contacts{
+  grid-row: 1;
+  grid-column: 2;
+  display: grid;
+  grid-template-rows:1fr 255px 5px;
+}
+#contactTextCont{
+  grid-row: 3/6;
+  grid-column: 2/4;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactText{
+  font-weight: 900;
+  font-style: italic;
+  font-size: 100px;
+  background-color: white;
+}
+#contactText{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+.usContactText{
+  font-weight: 100;
+  font-style: italic;
+  font-size: 100px;
+  background-color: white;
+}
+#usContactText{
+  display: none;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+#strokeContact{
+  grid-row: 4;
+  grid-column: 2/4;
+  justify-self: center;
+  background-color: black;
+  width: 0%;
+  transition: all 1s ease;
+}
+.topContact{
+  width: 100%;
+  height: 0%;
+  background-color: black;
+  transition: all 1s ease;
+  align-self: end;
+  z-index: 10;
+}
+#topContact{
+  grid-row: 2/5;
+  grid-column: 2/4;
+  overflow: hidden;
+  display: grid;
+  position: relative;
+}
+.bottomContact{
+  width: 100%;
+  height: 0%;
+  background-color: black;
+  transition: all 1s ease;
+  align-self: start;
+  z-index: 10;
+}
+#bottomContact{
+  grid-row: 5/7;
+  grid-column: 2/4;
+  overflow: hidden;
+  display: grid;
+  position: relative;
+}
+#formCont{
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.form-control{
+  display: block;
+  margin-bottom: 16px;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+  border-radius: 0;
+  resize: none;
+  transition: all 0.5s ease;
+}
+.contacts-form>.form-submit{
+  background-color: black;
+  color:white;
+  height: 50px;
+  width: 15%;
+  justify-self: center;
+}
+.contacts-form>.form-submit:hover{
+  width: 100%;
+  cursor: pointer;
+}
+.form-control:hover{
+  border: 1px solid #black;
+}
+input[type="submit"]{
+  border:0;
+}
+.form{
+  grid-row: 2/7;
+  grid-column: 2/4;
+}
+input, textarea{
+  border:0;
+  border-bottom: 3px solid black;
+}
+input:focus, textarea:focus{
+  outline: none;
+}
+input:required:valid, textarea:required:valid{
+  border:0;
+  border-bottom: 3px solid #28e230;
+}
+#messageContact{
+  font-size: 16px;
+  font-family: Arial;
+  height: 185px;
+}
+.footer{
+  grid-row: 7/8;
+  grid-column: 1/5;
+  width: 100%;
+  height: 175px;
+  align-self: end;
+  display: grid;
+  grid-template-rows: 5px 1fr;
+  overflow: hidden;
+}
+#footerStroke{
+  width: 0%;
+  height: 5px;
+  justify-self: center;
+  background-color: black;
+  z-index: 1;
+  transition: all 1s ease;
+}
+#footerCont{
+  display: none;
+  grid-row: 2;
+  height: 100%;
+  width: 100%;
+  color: white;
+  justify-content: center;
+  align-content: center;
+  background-color: black;
+  grid-template-columns: 1fr 500px 500px 1fr;
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+}
+#footer{
+  display: none;
+  grid-row: 7;
+  grid-column: 2/4;
+  align-self: end;
+  justify-self: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
